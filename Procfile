@@ -1,1 +1,1 @@
-web: gunicorn mansystem.wsgi --log-file -
+web: gunicorn TitleDeed.wsgi --log-file -
