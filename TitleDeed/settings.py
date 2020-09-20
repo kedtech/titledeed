@@ -129,3 +129,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
 parent_dir = os.path.abspath(os.path.dirname(__file__) + '/..')
 MEDIA_ROOT = os.path.join(parent_dir, 'media/')
 MEDIA_URL = 'media/'
+
+if 'DATABASE_URL' in os.environ:
+    import dj_database_url
+    DATABASES = {'default': dj_database_url.config()}
